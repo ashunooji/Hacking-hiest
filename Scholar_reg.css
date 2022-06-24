@@ -1,0 +1,9 @@
+.title_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user_info {
+    margin-left: 40%;
+}
