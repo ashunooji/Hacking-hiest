@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student registration</title>
+    <style type="text/css">
+        
+        label
+        {
+            border-radius: 40%;
+            text-align: center;
+            width:200px;
+            display:inline-block;
+            padding-bottom: 10px;
+        }
+        .image
+        {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+            clip-path: circle();
+        }
+        body
+        {
+            text-align: center;
+            background-color: cornflowerblue;
+        }
+        .labels
+        {
+            background-color: beige;
+            border-radius: 10px;
+            padding-top: 10px;
+            margin-left: 400px;
+            margin-right: 400px;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+        
+    </style>
+</head>
+    <body>
+        <h1>STUDENT REGISTRATION</h1>
+        <div class="image">
+        <img src="https://image.similarpng.com/very-thumbnail/2020/11/Graduation-cap-illustration-on-transparent-background-PNG.png"> </div>
+        <h2>ENTER YOUR CREDENTIALS</h1>
+            <div class="labels">
+        <form onsubmit="signup(event)">
+         
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br>
+
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br>
+
+            <label for="AGE">Age:</label>
+            <input type="text" id="AGE"><br>
+
+            <label for="College">College:</label>
+            <input type="text" id="College"><br>
+
+            <label for="MAIL">Email:</label>
+            <input type="text" id="MAIL"><br>
+            
+            <label for="PASSWORD">Password:</label>
+            <input type="password" id="PASSWORD"><br>
+            
+            <label for="CPASSWORD">Confirm password:</label>
+            <input type="password" id="CPASSWORD"><br><br>
+        
+            <input type="submit" value="Submit">
+            <input type="reset" href="student_reg.html">
+            <h4>Next page <a href="on_work.html">click here</a></h4>
+          </form>
+            </div>
+            <div class="footer">
+                <h4>If you already have an account <a href="login.html">Sign-in</a></h4>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+            <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems);
+              });
+            </script> 
+            <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+            <script>
+                 const firebaseConfig = {
+                  apiKey: "AIzaSyBgisjpgTJ5sxI2MxSpE-Qo1-BZ2mGt8O4",
+                  authDomain: "scholar-8e06c.firebaseapp.com",
+                  projectId: "scholar-8e06c",
+                  storageBucket: "scholar-8e06c.appspot.com",
+                  messagingSenderId: "697503104960",
+                  appId: "1:697503104960:web:1f84ff94a68b0cb631d225"
+                };
+                firebase.initializeApp(firebaseConfig);
+              </script>
+              <script src="./scripts/scholar_student.js"></script>
+    </body>
+</html>

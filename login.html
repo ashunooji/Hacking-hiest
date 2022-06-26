@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNIN</title>
+</head>
+<style type="text/css">
+html 
+{
+  height: 110%;
+}
+body {
+  background: linear-gradient(rgb(183, 45, 45),#3f82bd);
+  background-image: url(https://c1.wallpaperflare.com/preview/980/971/711/graduation-square-academic-cap-the-last-the-end.jpg);
+  background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: rgb(175, 135, 151);
+  
+}
+.LOGO
+{
+    margin-top: 40px;
+    margin-left:650px;
+    display:grid;
+    justify-content: right;
+    left :50%;
+    top:50%;
+    clip-path: circle();
+    transform: translate(20,-0%);
+}
+.labels
+{
+    padding-top: 20px;
+    text-align: right;
+    font-size: large;
+    font-weight: bold;
+}
+h1{
+    text-align: right;
+    padding-right: 2%;
+    color:rgb(0, 0, 3);
+}
+
+label{
+    padding: top 0;
+    width:80px;
+    display:inline-block;
+    text-align: right;
+    text-align: left;
+}
+.logo2
+{
+    margin-left:850px;
+    display:grid;
+    right:10%;
+    top:50%;
+    clip-path: circle();
+    transform: translate(40,1%);
+}
+</style>
+<body>
+     <h1>SIGN-IN<h1>
+     <div class="LOGO">
+     <img src="./loginlogo.png" width="510" height="210">
+     </div>
+     <div class="logo2">
+        <img src="https://img.freepik.com/free-vector/education-glossy-with-blue-stroke-icon-circle-isolated_159242-6673.jpg"width="510" height="210">
+     </div>
+     <div class="labels">
+            <label for="EMAIL">E-mail:</label>
+            <input type="email" id="loginEmail"><br>
+
+            <label for="PASSWORD">Password:</label>
+            <input type="password" id="loginPassword"><br><br>
+
+            <input type="submit" value="Submit" onclick="login(event)">
+            <h4>Next page <a href="on_work.html">click here</a></h4>
+     </div> 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+            <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems);
+              });
+            </script> 
+            <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+            <script>
+                 const firebaseConfig = {
+                  apiKey: "AIzaSyBgisjpgTJ5sxI2MxSpE-Qo1-BZ2mGt8O4",
+                  authDomain: "scholar-8e06c.firebaseapp.com",
+                  projectId: "scholar-8e06c",
+                  storageBucket: "scholar-8e06c.appspot.com",
+                  messagingSenderId: "697503104960",
+                  appId: "1:697503104960:web:1f84ff94a68b0cb631d225"
+                };
+                firebase.initializeApp(firebaseConfig);
+              </script>
+              <script src="./scripts/scholar_student.js"></script>      
+</body>
+</html>

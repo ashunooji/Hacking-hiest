@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholar registration</title>
+    <link rel="stylesheet" href="Scholar_reg.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Please Signup</h1>
+        </div>
+        <div class="body" id="modal1">
+            <div class="body_info">
+                <input type="text" placeholder="Name" id="name" class="info">
+                <input type="number" placeholder="Age" id="age" class="info">
+                <input type="email" placeholder="Email" id="signupEmail" class="info">
+                <input type="password" placeholder="Password" id="signupPassword" class="info">
+                <input type="password" placeholder="Re-enter Password" class="info">
+                <input type="text" placeholder="Enter Qaulification" id="Qaul" class="info">
+                <h3>Uplaod your Qaulification certifcate</h3>
+                <input type="file" placeholder="Choose file">
+                <button type="submit" onclick="register(event)">Register</button>
+                <h4>Next page <a href="on_work.html">click here</a></h4>
+            </div>
+        </div>
+        <div class="footer">
+            <h4>If you already have an account <a href="login.html">Sign-in</a></h4>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+    <script>
+          document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems);
+      });
+    </script> 
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script>
+         const firebaseConfig = {
+          apiKey: "AIzaSyBgisjpgTJ5sxI2MxSpE-Qo1-BZ2mGt8O4",
+          authDomain: "scholar-8e06c.firebaseapp.com",
+          projectId: "scholar-8e06c",
+          storageBucket: "scholar-8e06c.appspot.com",
+          messagingSenderId: "697503104960",
+          appId: "1:697503104960:web:1f84ff94a68b0cb631d225"
+        };
+        firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="./scripts/scholar_student.js"></script>
+</body>
+
+</html>
